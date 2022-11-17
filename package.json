@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "https://github.com/Andrew-2609/bitcoin-candle-api",
   "author": "Andrew Monteiro <andrew.agoravai@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.5.3"
+  }
 }
