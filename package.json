@@ -1,0 +1,9 @@
+{
+  "name": "bitcoin-candle-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/Andrew-2609/bitcoin-candle-api",
+  "author": "Andrew Monteiro <andrew.agoravai@gmail.com>",
+  "license": "MIT"
+}
