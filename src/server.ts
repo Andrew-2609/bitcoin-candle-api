@@ -13,7 +13,7 @@ const createServer = async (): Promise<void> => {
   const server = app.listen(PORT, () => console.log(`App running at ${PORT}`))
 
   const candleMsgChannel = new CandleMessageChannel(server)
-  candleMsgChannel.consumeMessages()
+  await candleMsgChannel.consumeMessages()
 
   process.on('SIGINT', async () => {
     await connection.close()

@@ -19,8 +19,6 @@ export class CandleMessageChannel {
     })
 
     this.io.on('connection', () => console.log(`WebSocket connection created`))
-
-    this.createMessageChannel()
   }
 
   private async createMessageChannel() {
@@ -34,7 +32,11 @@ export class CandleMessageChannel {
     }
   }
 
-  consumeMessages() {
+  async consumeMessages() {
+    await this.createMessageChannel()
+
+    if (!this.channel) return
+
     this.channel.consume(String(process.env.QUEUE_NAME), async (message: ConsumeMessage) => {
       const candle: ICandle = JSON.parse(message.content.toString())
       console.log(`Message received`)
