@@ -6,6 +6,9 @@
   "repository": "https://github.com/Andrew-2609/bitcoin-candle-api",
   "author": "Andrew Monteiro <andrew.agoravai@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts"
+  },
   "dependencies": {
     "amqplib": "^0.10.3",
     "cors": "^2.8.5",
